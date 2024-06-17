@@ -1,0 +1,18 @@
+.skill-tile {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .skill-image {
+    width: 100px; 
+    height: 100px; 
+    object-fit: cover; 
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .skill-tile h3 {
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+  

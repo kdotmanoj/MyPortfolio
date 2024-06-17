@@ -1,0 +1,38 @@
+.project-tile {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.project-tile a{
+  text-decoration: none;
+  color: #333;
+  margin: 1rem;
+}
+
+.project-tile h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.project-tile p {
+  margin-bottom: 10px;
+}
+
+.project-details {
+  display: flex;
+  align-items: center;
+}
+
+.project-image {
+  width: 150px;
+  height: 100px;
+  margin-right: 20px;
+}
+
+.project-details img{
+  width: 30rem;
+  height: auto;
+  object-fit: cover;
+}

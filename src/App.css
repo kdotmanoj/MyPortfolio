@@ -1,38 +1,216 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #282c34;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  height: 100vh;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  list-style: none;
+  background-color: #282c34 (0, 0, 0.7);
+  padding: 10px;
+  z-index: 1000;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav-item {
+  margin: 0 15px;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: white;
+  padding: 5px 0;
+}
+
+.nav-item a::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 0;
+  background: white;
+  transition: width 0.3s ease;
+}
+
+.nav-item a:hover::after {
+  width: 100%;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.section {
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
+  scroll-snap-align: start;
+  height: calc(100vh - 60px); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.section h1 {
+  margin-top: 0;
+  font-size: 3rem;
+}
+
+.section p {
+  font-size: 1.6rem; 
+  line-height: 1.6;
+}
+
+.home-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #282c34;
+}
+
+.about-section {
+  background-color: #282c34;
+  color: #333;
+}
+
+.resume-section,
+.skills-section {
+  background-color: #282c34;
+  color: #333;
+}
+
+.home-content {
+  max-width: 1200px; 
+  margin: 0 auto; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.left {
+  flex: 1;
+  text-align: right;
+  padding-right: 20px;
+}
+
+.right {
+  flex: 1;
+  text-align: left;
+  padding-left: 20px; 
+}
+
+.manoj-image {
+  max-width: 40%;
+  width: 100%; 
+  border-radius: 10%; 
+}
+
+.about-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-content {
+  background: #fff;
+  padding: 20px 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin: 20px 0;
+}
+
+.about-content strong {
+  color: #3b82f6;
+}
+
+.about-content a {
+  color: #3b82f6;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.about-content a:hover {
+  color: #1e40af;
+}
+
+.section {
+  text-align: center; 
+}
+
+.section-heading {
+  font-size: 2rem; 
+  color: white; 
+}
+
+.projects-section, .resume-section, .skills-section {
+  background-color: #282c34; 
+  color: white; 
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
+  scroll-snap-align: start;
+  height: calc(100vh - 60px); 
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-list {
+  display: flex;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.project-tile {
+  background-color: #ffffff; 
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-tile h3 {
+  margin-top: 0;
+}
+
+.project-tile p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.project-tile a {
+  color: #3b82f6;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.project-tile a:hover {
+  color: #1e40af;
+}
+
+.social-icons {
+  display: flex;
+  margin-top: 30px;
+  gap: 50px;
 }
